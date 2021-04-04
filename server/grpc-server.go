@@ -23,6 +23,8 @@ func main() {
 		log.Fatalf("could not listen: %v", err)
 	}
 
+	log.Println("Run gRPC Server")
+
 	errServe := srv.Serve(l)
 	if errServe != nil {
 		log.Fatal(errServe)
